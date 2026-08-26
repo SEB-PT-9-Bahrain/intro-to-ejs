@@ -6,12 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>All Students Page</h1>
-
-    <% for(oneStudent of students){ %>
-        <p> <%= oneStudent.name %> </p>
-        <a href="/students/<%= oneStudent.id %>">See Details</a>
-    <% } %>
-
+    <h1>Student Details</h1>
+    <%= student.name %>
 </body>
 </html>

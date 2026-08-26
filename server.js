@@ -49,6 +49,14 @@ app.get('/students',(req,res)=>{
     res.render('all-students.ejs',{students: students})
 })
 
+app.get('/students/:studentId',(req,res)=>{
+    console.log(req.params.studentId)
+    const foundStudent = students.find((oneStudent)=>{
+        return oneStudent.id === Number(req.params.studentId)
+    })
+    res.render('student-details.ejs',{student: foundStudent})
+})
+
  
 
 // Exercise 1:
