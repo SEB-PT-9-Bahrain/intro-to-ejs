@@ -54,7 +54,7 @@ app.get('/students/:studentId',(req,res)=>{
     const foundStudent = students.find((oneStudent)=>{
         return oneStudent.id === Number(req.params.studentId)
     })
-    res.render('student-details.ejs',{student: foundStudent})
+    res.render('student-details.ejs',{student: foundStudent,})
 })
 
  
