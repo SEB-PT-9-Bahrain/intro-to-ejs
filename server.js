@@ -6,6 +6,7 @@ const anyName = require('./second')
 
 console.log(anyName.secondTeacher)
 
+const students = require('./data')
 
 
 app.use(express.static('public')); //all static files are in the public folder
