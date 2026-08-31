@@ -2,33 +2,14 @@
 const express = require("express") //importing express package
 const app = express() // creates a express application
 
+const anyName = require('./second')
 
-
+console.log(anyName.secondTeacher)
 
 
 
 app.use(express.static('public')); //all static files are in the public folder
 
-
-// DATABASE
-const students = [
-    {
-        id: 1,
-        name: 'Waleed'
-    },
-    {
-        id: 2,
-        name: 'Mahdi'
-    },
-    {
-        id: 52,
-        name: 'Ahmed'
-    },
-    {
-        id: 4,
-        name: 'Ali'
-    }
-]
 
 
 
@@ -41,7 +22,7 @@ app.get('/',(req,res) => {
         })
 })
 
-app.get('/about',(req,res)=>{
+app.get('/about-me',(req,res)=>{
     res.render('about-me.ejs')
 })
 
